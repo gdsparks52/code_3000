@@ -11,6 +11,7 @@ def load_data(anonymized_path, auxiliary_path):
 def link_records(anon_df, aux_df):
     #Merge the anonymized and auxiliary datasets
     merged = pd.merge(anon_df, aux_df, on=['age', 'gender', 'zip3'])
+    merged = merged.rename(columns={'name': 'matched_name'}) #Fix autograder error
     #Count records in merged dataset that correspond to each anon_id
     match_counts = merged['anon_id'].value_counts()
     #Filter to keep only the uniquely deanonymized individuals
