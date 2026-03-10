@@ -30,6 +30,6 @@ def deanonymization_rate(matches_df, original_anon_df):
     if total_records == 0:
         return 0.0
         
-    return (num_matches / total_records) * 100
+    return (num_matches / total_records)
 
     # raise NotImplementedError
