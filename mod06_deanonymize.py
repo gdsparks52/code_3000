@@ -18,7 +18,7 @@ def link_records(anon_df, aux_df):
     unique_matches = merged[merged['anon_id'].isin(unique_ids)]
     return unique_matches
     
-    raise NotImplementedError
+    # raise NotImplementedError
 
 
 def deanonymization_rate(matches_df, original_anon_df):
@@ -32,4 +32,4 @@ def deanonymization_rate(matches_df, original_anon_df):
         
     return (num_matches / total_records) * 100
 
-    raise NotImplementedError
+    # raise NotImplementedError
